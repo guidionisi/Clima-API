@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Clima API</title>
+</head>
+
+<body>
+
+    <main>
+
+        <div class="intro">
+            <h1>Vai dar praia?</h1>
+            <p>Digite a cidade para buscar as condições do tempo:</p>
+        </div>
+
+        <div class="busca">
+            <input type="text">
+            <button>
+                <img src="/search.svg" alt="ícone de lupa">
+            </button>
+        </div>
+
+        <div class="resultado hide">
+
+            <div>
+                <h1 id="localidade"></h1>
+                <div class="resultado-item">
+                    <img class="icon" src="/thermometer.svg" alt="ícone de temperatura">
+                    <span id="temperatura"></span>
+                </div>
+                <div class="resultado-item">
+                    <img class="icon" src="/humidity.svg" alt="ícone de umidade">
+                    <span id="umidade"></span>
+                </div>
+                <div class="resultado-item">
+                    <img class="icon" src="/wind.svg" alt="ícone de vento">
+                    <span id="vento"></span>
+                </div>
+            </div>
+
+            <div class="clima-tempo">
+                <img src="" alt="ícone clima-tempo">
+                <span id="descricao"></span>
+            </div>
+
+        </div>
+    </main>
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
