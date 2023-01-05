@@ -1,53 +1,86 @@
-// elementos html
+//---------------------- elementos html ----------------------
 const cidade = document.querySelector("input");
 const btn = document.querySelector("button");
-const localidade = document.querySelector("#localidade");
-const temperatura = document.querySelector("#temperatura");
-const umidade = document.querySelector("#umidade");
-const vento = document.querySelector("#vento");
-const img = document.querySelector(".clima-tempo img");
-const descricao = document.querySelector("#descricao");
-const resultado = document.querySelector(".resultado");
+const error = document.querySelector(".error");
+const localidade = document.querySelectorAll("#localidade");
+const temperatura = document.querySelectorAll("#temperatura");
+const umidade = document.querySelectorAll("#umidade");
+const vento = document.querySelectorAll("#vento");
+const img = document.querySelectorAll(".clima-tempo img");
+const descricao = document.querySelectorAll("#descricao");
+const resultado = document.querySelectorAll(".resultado");
 
-//----------------- eventos
+//lista de cidades e carregamento para o DOM
+const listaCidades = [
+  "torres",
+  "capao da canoa",
+  "tramandai",
+  "imbé",
+  "cidreira",
+];
+listaCidades.forEach((cidade, index) => {
+  getDataApi(cidade, index, apiKey);
+  console.log(cidade, index);
+});
+
+//---------------------- eventos ----------------------
 // clique no botão
 btn.addEventListener("click", () => {
-  if (cidade.value) getDataApi();
+  if (cidade.value) getDataApi(cidade.value, listaCidades.length, apiKey);
 });
 
 // tecla ENTER no input chama a API
-document.addEventListener("keypress", function (event) {
+document.addEventListener("keypress", (event) => {
   if (event.key === "Enter") {
-    getDataApi();
+    getDataApi(cidade.value, listaCidades.length, apiKey);
   }
 });
 
-//----------------- funções
-async function getDataApi() {
-  const url = `https://api.openweathermap.org/data/2.5/weather?q=${cidade.value}&units=metric&appid=${apiKey}&lang=pt_br`;
+//---------------------- funções ----------------------
+
+// entra com o lugar e a chave da API e retorna os dados meteorológicos informados pela função showData()
+async function getDataApi(cidade, index, apiKey) {
+  const url = `https://api.openweathermap.org/data/2.5/weather?q=${cidade}&units=metric&appid=${apiKey}&lang=pt_br`;
 
   try {
     await fetch(url)
       .then((response) => response.json()) //transforma em json
       .then((data) => {
-        //se a cidade não existe
         if (data.cod && data.cod === "404") {
-          return alert("Local não encontrado!");
+          //se a cidade não existe
+          showError();
+        } else {
+          hideError();
+          showData(data, index);
         }
-        showData(data);
       });
   } catch (error) {
-    alert(error);
+    console.log(error);
   }
 }
 
-function showData(data) {
+// mostra os dados na tela de acordo com o índice da cidade
+function showData(data, i) {
+  localidade[i].innerHTML = `${data.name}, ${data.sys.country}`;
+  temperatura[i].innerHTML = `Temperatura: ${Math.round(data.main.temp)}ºC`;
+  umidade[i].innerHTML = `Umidade: ${data.main.humidity}%`;
+  vento[i].innerHTML = `Vento: ${Math.round(data.wind.speed * 3.6)} km/h`;
+  img[
+    i
+  ].src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+  descricao[i].innerHTML = `${data.weather[0].description}`;
+  resultado[i].classList.remove("hide");
   console.log(data);
-  localidade.innerHTML = `${data.name}, ${data.sys.country}`;
-  temperatura.innerHTML = `Temperatura: ${Math.round(data.main.temp)}ºC`;
-  umidade.innerHTML = `Umidade: ${data.main.humidity}%`;
-  vento.innerHTML = `Vento: ${Math.round(data.wind.speed * 3.6)} km/h`;
-  img.src = `http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
-  descricao.innerHTML = `${data.weather[0].description}`;
-  resultado.classList.remove("hide");
+}
+
+//apelos visuais para indicar erro no preenchimento da busca
+function showError() {
+  cidade.style.boxShadow = "2px 2px 10px 4px #d0d0d0";
+  error.style.display = "block";
+  resultado.classList.add("hide");
+}
+
+function hideError() {
+  cidade.style.removeProperty("box-shadow");
+  error.style.display = "none";
 }

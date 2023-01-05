@@ -9,18 +9,27 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
   background-color: #f7f7f7;
 }
 
 main {
+  display: block;
+  margin: 0 auto;
+  max-width: 1280px;
+}
+
+.lista-cidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+.buscador {
+  margin: 0 auto;
+}
+.card {
   padding: 24px;
-  width: 100%;
-  max-width: 400px;
+  width: 400px;
   border-radius: 8px;
   box-shadow: 2px 2px 10px #e0e0e0;
 }
@@ -43,6 +52,10 @@ h1 {
 }
 
 /* área de busca */
+.buscador {
+  /* display: flex; */
+  /* justify-content: center; */
+}
 .busca {
   display: flex;
   align-items: center;
@@ -55,7 +68,7 @@ h1 {
   border-radius: 4px;
   font-size: 1.25em;
   width: 100%;
-  border: 1px solid #404040;
+  border: 1px solid #808080;
 }
 
 .busca button {
@@ -69,10 +82,16 @@ button img {
   height: 40px;
 }
 
+.error {
+  display: none;
+  font-size: 0.75em;
+  margin-top: 4px;
+  color: tomato;
+}
 /* resultados da busca */
 .resultado {
   display: flex;
-  margin-top: 16px;
+  /* margin-top: 16px; */
   justify-content: space-between;
   align-items: center;
 }
