@@ -1,0 +1,43 @@
+/* header */
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: no-wrap;
+  gap: 40px;
+  padding: 60px 10px;
+  justify-content: space-around;
+  align-items: center;
+  background-image: url("/img/banner.jpg");
+}
+ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+header h1 {
+  font-size: 4em;
+  font-weight: 800;
+  color: #f7f7f7;
+  position: relative;
+}
+
+header h1::after {
+  content: "GD";
+  font-size: 0.625rem;
+  font-weight: 700;
+  position: absolute;
+  bottom: 0;
+  right: -10px;
+}
+header h2 {
+  font-size: 1rem;
+  color: aliceblue;
+  max-width: 30ch;
+  padding-bottom: 8px;
+}
+header li {
+  font-size: 0.75rem;
+  color: aliceblue;
+}

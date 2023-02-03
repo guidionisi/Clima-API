@@ -12,11 +12,12 @@ const resultado = document.querySelectorAll(".resultado");
 
 //lista de cidades e carregamento para o DOM
 const listaCidades = [
-  "torres",
-  "capao da canoa",
-  "tramandai",
-  "imbé",
-  "cidreira",
+  "Carazinho",
+  "Espumoso",
+  "Lageado",
+  "Passo Fundo",
+  "Sarandi",
+  "Tio Hugo",
 ];
 listaCidades.forEach((cidade, index) => {
   getDataApi(cidade, index, apiKey);

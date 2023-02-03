@@ -5,25 +5,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Clima API</title>
+    <link rel="stylesheet" href="css/style.css">
+    <title>Tempo Norte</title>
 </head>
 
 <body>
+    <header>
+        <div>
+            <h1>Clima Norte</h1>
+        </div>
+        <div>
+            <h2>Condições atuais do tempo na região norte do RS</h2>
+            <ul>
+                <li>Carazinho</li>
+                <li>|</li>
+                <li> Espumoso</li>
+                <li>|</li>
+                <li>Lageado</li>
+                <li>|</li>
+                <li>Passo Fundo</li>
+                <li>|</li>
+                <li>Sarandi</li>
+
+            </ul>
+        </div>
+    </header>
+
+
     <main>
-        <section class="lista-cidades">
+        <section class="container-lista-cidades">
+            <!-- dados de uma cidade -->
             <div class="resultado card" id="cidade-torres">
                 <div>
-                    <h1 id="localidade"></h1>
-                    <div class="resultado-item">
+                    <h2 id="localidade"></h2>
+                    <div>
                         <img class="icon" src="img/thermometer.svg" alt="ícone de temperatura">
                         <span id="temperatura"></span>
                     </div>
-                    <div class="resultado-item">
+                    <div>
                         <img class="icon" src="img/humidity.svg" alt="ícone de umidade">
                         <span id="umidade"></span>
                     </div>
-                    <div class="resultado-item">
+                    <div>
                         <img class="icon" src="img/wind.svg" alt="ícone de vento">
                         <span id="vento"></span>
                     </div>
@@ -34,9 +57,11 @@
                     <span id="descricao"></span>
                 </div>
             </div>
+
+            <!-- dados de uma cidade -->
             <div class="resultado card" id="cidade-capaodacanoa">
                 <div>
-                    <h1 id="localidade"></h1>
+                    <h2 id="localidade"></h2>
                     <div class="resultado-item">
                         <img class="icon" src="img/thermometer.svg" alt="ícone de temperatura">
                         <span id="temperatura"></span>
@@ -56,9 +81,11 @@
                     <span id="descricao"></span>
                 </div>
             </div>
+
+            <!-- dados de uma cidade -->
             <div class="resultado card" id="cidade-tramandai">
                 <div>
-                    <h1 id="localidade"></h1>
+                    <h2 id="localidade"></h2>
                     <div class="resultado-item">
                         <img class="icon" src="img/thermometer.svg" alt="ícone de temperatura">
                         <span id="temperatura"></span>
@@ -78,9 +105,11 @@
                     <span id="descricao"></span>
                 </div>
             </div>
+
+            <!-- dados de uma cidade -->
             <div class="resultado card" id="cidade-cidreira">
                 <div>
-                    <h1 id="localidade"></h1>
+                    <h2 id="localidade"></h2>
                     <div class="resultado-item">
                         <img class="icon" src="img/thermometer.svg" alt="ícone de temperatura">
                         <span id="temperatura"></span>
@@ -100,9 +129,35 @@
                     <span id="descricao"></span>
                 </div>
             </div>
+
+            <!-- dados de uma cidade -->
             <div class="resultado card" id="cidade-imbé">
                 <div>
-                    <h1 id="localidade"></h1>
+                    <h2 id="localidade"></h2>
+                    <div class="resultado-item">
+                        <img class="icon" src="img/thermometer.svg" alt="ícone de temperatura">
+                        <span id="temperatura"></span>
+                    </div>
+                    <div class="resultado-item">
+                        <img class="icon" src="img/humidity.svg" alt="ícone de umidade">
+                        <span id="umidade"></span>
+                    </div>
+                    <div class="resultado-item">
+                        <img class="icon" src="img/wind.svg" alt="ícone de vento">
+                        <span id="vento"></span>
+                    </div>
+                </div>
+
+                <div class="clima-tempo">
+                    <img src="" alt="ícone clima-tempo">
+                    <span id="descricao"></span>
+                </div>
+            </div>
+
+            <!-- dados de uma cidade -->
+            <div class="resultado card" id="cidade-tio-hugo">
+                <div>
+                    <h2 id="localidade"></h2>
                     <div class="resultado-item">
                         <img class="icon" src="img/thermometer.svg" alt="ícone de temperatura">
                         <span id="temperatura"></span>
@@ -124,13 +179,15 @@
             </div>
         </section>
 
-        <section class="buscador card">
-            <div class="intro">
-                <h1>Vai dar praia?</h1>
-                <p>Digite a cidade para buscar as condições do tempo:</p>
+
+
+        <section class="container-busca card">
+            <div>
+                <h2>Não encontrou sua cidade?</h2>
+                <p>Digite o nome para buscar as condições do tempo:</p>
             </div>
 
-            <div class="busca">
+            <div class="busca-area">
                 <input type="text" class="focus">
                 <button>
                     <img src="img/search.svg" alt="ícone de lupa">
@@ -143,7 +200,7 @@
             <div class="resultado hide">
 
                 <div>
-                    <h1 id="localidade"></h1>
+                    <h2 id="localidade"></h2>
                     <div class="resultado-item">
                         <img class="icon" src="img/thermometer.svg" alt="ícone de temperatura">
                         <span id="temperatura"></span>
@@ -169,6 +226,12 @@
 
     <script src="js/apiKey.js"></script>
     <script src="js/script.js"></script>
+
+    <footer>
+        <p>Esta é uma aplicação não comercial e não tem a pretenção de apresentar dados precisos.</p>
+        <p>Base de dados obtido de <a href="https://openweathermap.org/" target="blank">OpenWeather</a>.</p>
+        <p>Desenvolvido por guidionisi@2023.</p>
+    </footer>
 </body>
 
 </html>

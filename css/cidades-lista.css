@@ -1,0 +1,44 @@
+/* container com as cidades e suas previsões */
+.container-lista-cidades {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 860px;
+  margin-top: 30px;
+}
+
+/* posiciona e formata os elementos dentro do card */
+.resultado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.resultado div {
+  color: #2a2a2a;
+}
+
+.icon {
+  height: 20px;
+  width: auto;
+  margin-right: 4px;
+}
+
+/* ícone clima-tempo que fica dentro do card*/
+.clima-tempo {
+  display: flex;
+  flex-direction: column;
+}
+
+.clima-tempo span {
+  text-align: center;
+  text-transform: capitalize;
+  font-size: 0.75em;
+}
+
+.clima-tempo img {
+  border-radius: 4px;
+  min-width: 6em;
+  background-image: radial-gradient(#b5b5b5, #f7f7f7 70%);
+}

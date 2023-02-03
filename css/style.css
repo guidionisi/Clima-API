@@ -1,32 +1,50 @@
+/* ----------------------------------------- */
+/* CSS GLOBAL e RESET*/
+/* ----------------------------------------- */
+
+/* importação de fontes */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,700&display=swap");
 
-/* estilos globais */
+/* importação de estilos auxiliares */
+@import "/css//header.css";
+@import "/css/cidades-lista.css";
+@import "/css/footer.css";
+@import "/css/componentes.css";
+@import "/css/buscador.css";
+
+/* reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", "sans serif";
+  line-height: 1;
 }
+
+a {
+  text-decoration: none;
+  color: cadetblue;
+  cursor: pointer;
+}
+
+/* Estilos Globais */
 
 body {
   background-color: #f7f7f7;
 }
 
-main {
-  display: block;
-  margin: 0 auto;
-  max-width: 1280px;
+h1 {
+  font-weight: 700;
+  color: #101010;
 }
 
-.lista-cidades {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
+h2 {
+  font-weight: 400;
+  color: #101010;
+  padding-bottom: 8px;
 }
-.buscador {
-  margin: 0 auto;
-}
+
+/* Cria o card que envolve a previsão de uma cidade */
 .card {
   padding: 24px;
   width: 400px;
@@ -34,94 +52,14 @@ main {
   box-shadow: 2px 2px 10px #e0e0e0;
 }
 
-.hide {
-  opacity: 0%;
-}
-
-h1 {
-  color: #101010;
-}
-
-/* título e introdução */
-.intro {
-  margin-bottom: 10px;
-}
-
-.intro p {
-  color: #2a2a2a;
-}
-
-/* área de busca */
-.buscador {
-  /* display: flex; */
-  /* justify-content: center; */
-}
-.busca {
-  display: flex;
-  align-items: center;
-  gap: 4px;
-}
-
-.busca input {
-  padding: 4px;
-  outline: none;
-  border-radius: 4px;
-  font-size: 1.25em;
-  width: 100%;
-  border: 1px solid #808080;
-}
-
-.busca button {
-  display: flex;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-  outline: none;
-}
-button img {
-  height: 40px;
-}
-
+/* mensagem de erro ao não encontrar cidade */
 .error {
   display: none;
   font-size: 0.75em;
   margin-top: 4px;
   color: tomato;
 }
-/* resultados da busca */
-.resultado {
-  display: flex;
-  /* margin-top: 16px; */
-  justify-content: space-between;
-  align-items: center;
-}
-
-.resultado-item {
-  display: flex;
-  align-items: center;
-  color: #2a2a2a;
-}
-
-.icon {
-  height: 20px;
-  width: auto;
-  margin-right: 4px;
-}
-
-/* ícone clima-tempo */
-.clima-tempo {
-  display: flex;
-  flex-direction: column;
-}
-
-.clima-tempo span {
-  text-align: center;
-  text-transform: capitalize;
-  font-size: 0.75em;
-}
-
-.clima-tempo img {
-  border-radius: 4px;
-  min-width: 6em;
-  background-image: radial-gradient(#b5b5b5, #f7f7f7 70%);
+/* esconde no DOM */
+.hide {
+  opacity: 0%;
 }

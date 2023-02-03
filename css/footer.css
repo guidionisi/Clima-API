@@ -1,0 +1,11 @@
+footer {
+  text-align: center;
+  padding: 20px 10px;
+  background-color: #2a2a2a;
+}
+
+footer p {
+  font-size: 0.75rem;
+  color: aliceblue;
+  line-height: 1.3;
+}
