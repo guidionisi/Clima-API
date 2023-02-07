@@ -17,176 +17,26 @@
         <div>
             <h2>Condições atuais do tempo na região norte do RS</h2>
             <ul>
-                <li>Carazinho</li>
-                <li>|</li>
-                <li> Espumoso</li>
-                <li>|</li>
-                <li>Lageado</li>
-                <li>|</li>
-                <li>Passo Fundo</li>
-                <li>|</li>
-                <li>Sarandi</li>
-
+                <!-- nomes das cidades inseridas pelo JS -->
             </ul>
         </div>
     </header>
 
 
     <main>
+        <!-------------------- seção de listagem de cidades -->
         <section class="container-lista-cidades">
-            <!-- dados de uma cidade -->
-            <div class="resultado card" id="cidade-torres">
-                <div>
-                    <h2 id="localidade"></h2>
-                    <div>
-                        <img class="icon" src="img/thermometer.svg" alt="ícone de temperatura">
-                        <span id="temperatura"></span>
-                    </div>
-                    <div>
-                        <img class="icon" src="img/humidity.svg" alt="ícone de umidade">
-                        <span id="umidade"></span>
-                    </div>
-                    <div>
-                        <img class="icon" src="img/wind.svg" alt="ícone de vento">
-                        <span id="vento"></span>
-                    </div>
-                </div>
-
-                <div class="clima-tempo">
-                    <img src="" alt="ícone clima-tempo">
-                    <span id="descricao"></span>
-                </div>
-            </div>
-
-            <!-- dados de uma cidade -->
-            <div class="resultado card" id="cidade-capaodacanoa">
-                <div>
-                    <h2 id="localidade"></h2>
-                    <div class="resultado-item">
-                        <img class="icon" src="img/thermometer.svg" alt="ícone de temperatura">
-                        <span id="temperatura"></span>
-                    </div>
-                    <div class="resultado-item">
-                        <img class="icon" src="img/humidity.svg" alt="ícone de umidade">
-                        <span id="umidade"></span>
-                    </div>
-                    <div class="resultado-item">
-                        <img class="icon" src="img/wind.svg" alt="ícone de vento">
-                        <span id="vento"></span>
-                    </div>
-                </div>
-
-                <div class="clima-tempo">
-                    <img src="" alt="ícone clima-tempo">
-                    <span id="descricao"></span>
-                </div>
-            </div>
-
-            <!-- dados de uma cidade -->
-            <div class="resultado card" id="cidade-tramandai">
-                <div>
-                    <h2 id="localidade"></h2>
-                    <div class="resultado-item">
-                        <img class="icon" src="img/thermometer.svg" alt="ícone de temperatura">
-                        <span id="temperatura"></span>
-                    </div>
-                    <div class="resultado-item">
-                        <img class="icon" src="img/humidity.svg" alt="ícone de umidade">
-                        <span id="umidade"></span>
-                    </div>
-                    <div class="resultado-item">
-                        <img class="icon" src="img/wind.svg" alt="ícone de vento">
-                        <span id="vento"></span>
-                    </div>
-                </div>
-
-                <div class="clima-tempo">
-                    <img src="" alt="ícone clima-tempo">
-                    <span id="descricao"></span>
-                </div>
-            </div>
-
-            <!-- dados de uma cidade -->
-            <div class="resultado card" id="cidade-cidreira">
-                <div>
-                    <h2 id="localidade"></h2>
-                    <div class="resultado-item">
-                        <img class="icon" src="img/thermometer.svg" alt="ícone de temperatura">
-                        <span id="temperatura"></span>
-                    </div>
-                    <div class="resultado-item">
-                        <img class="icon" src="img/humidity.svg" alt="ícone de umidade">
-                        <span id="umidade"></span>
-                    </div>
-                    <div class="resultado-item">
-                        <img class="icon" src="img/wind.svg" alt="ícone de vento">
-                        <span id="vento"></span>
-                    </div>
-                </div>
-
-                <div class="clima-tempo">
-                    <img src="" alt="ícone clima-tempo">
-                    <span id="descricao"></span>
-                </div>
-            </div>
-
-            <!-- dados de uma cidade -->
-            <div class="resultado card" id="cidade-imbé">
-                <div>
-                    <h2 id="localidade"></h2>
-                    <div class="resultado-item">
-                        <img class="icon" src="img/thermometer.svg" alt="ícone de temperatura">
-                        <span id="temperatura"></span>
-                    </div>
-                    <div class="resultado-item">
-                        <img class="icon" src="img/humidity.svg" alt="ícone de umidade">
-                        <span id="umidade"></span>
-                    </div>
-                    <div class="resultado-item">
-                        <img class="icon" src="img/wind.svg" alt="ícone de vento">
-                        <span id="vento"></span>
-                    </div>
-                </div>
-
-                <div class="clima-tempo">
-                    <img src="" alt="ícone clima-tempo">
-                    <span id="descricao"></span>
-                </div>
-            </div>
-
-            <!-- dados de uma cidade -->
-            <div class="resultado card" id="cidade-tio-hugo">
-                <div>
-                    <h2 id="localidade"></h2>
-                    <div class="resultado-item">
-                        <img class="icon" src="img/thermometer.svg" alt="ícone de temperatura">
-                        <span id="temperatura"></span>
-                    </div>
-                    <div class="resultado-item">
-                        <img class="icon" src="img/humidity.svg" alt="ícone de umidade">
-                        <span id="umidade"></span>
-                    </div>
-                    <div class="resultado-item">
-                        <img class="icon" src="img/wind.svg" alt="ícone de vento">
-                        <span id="vento"></span>
-                    </div>
-                </div>
-
-                <div class="clima-tempo">
-                    <img src="" alt="ícone clima-tempo">
-                    <span id="descricao"></span>
-                </div>
-            </div>
+            <ul>
+                <!-- os itens da lista com os dados de cada cidade são inserido pelo script -->
+            </ul>
         </section>
 
-
-
+        <!-------------------- seção de busca -->
         <section class="container-busca card">
             <div>
-                <h2>Não encontrou sua cidade?</h2>
-                <p>Digite o nome para buscar as condições do tempo:</p>
+                <h2>Não encontrou?</h2>
+                <p>Digite o nome da cidade:</p>
             </div>
-
             <div class="busca-area">
                 <input type="text" class="focus">
                 <button>
@@ -196,7 +46,6 @@
             <div class="error">
                 <span>Cidade não encontrada</span>
             </div>
-
             <div class="resultado hide">
 
                 <div>
@@ -224,14 +73,17 @@
         </section>
     </main>
 
-    <script src="js/apiKey.js"></script>
-    <script src="js/script.js"></script>
 
     <footer>
         <p>Esta é uma aplicação não comercial e não tem a pretenção de apresentar dados precisos.</p>
         <p>Base de dados obtido de <a href="https://openweathermap.org/" target="blank">OpenWeather</a>.</p>
-        <p>Desenvolvido por guidionisi@2023.</p>
+        <p>Desenvolvido por <a href="https://www.linkedin.com/in/guilhermeodionisio">guidionisi@2023</a>.</p>
     </footer>
+
+    <!-- scripts JS -->
+    <script type="module" src="js/script.js"></script>
+    <!-- scripts JS -->
+
 </body>
 
 </html>

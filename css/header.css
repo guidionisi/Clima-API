@@ -5,12 +5,11 @@ header {
   flex-wrap: no-wrap;
   gap: 40px;
   padding: 60px 10px;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
   background-image: url("/img/banner.jpg");
 }
-ul {
-  list-style: none;
+header ul {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;

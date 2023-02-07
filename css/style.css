@@ -9,8 +9,7 @@
 @import "/css//header.css";
 @import "/css/cidades-lista.css";
 @import "/css/footer.css";
-@import "/css/componentes.css";
-@import "/css/buscador.css";
+@import "/css/busca.css";
 
 /* reset */
 * {
@@ -27,6 +26,9 @@ a {
   cursor: pointer;
 }
 
+ul {
+  list-style: none;
+}
 /* Estilos Globais */
 
 body {

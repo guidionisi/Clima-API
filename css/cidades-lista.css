@@ -9,8 +9,15 @@
   margin-top: 30px;
 }
 
+.container-lista-cidades ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 /* posiciona e formata os elementos dentro do card */
-.resultado {
+.resultado a {
   display: flex;
   justify-content: space-between;
   align-items: center;
