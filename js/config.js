@@ -1,4 +1,4 @@
-export const apiKey = "589d7de688a585e4f2fd4b569fef3242";
+export const apiKey = "sua chave openweather aqui";
 
 export const cidades = [
   "Carazinho",
