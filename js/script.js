@@ -68,7 +68,6 @@ function showData(data) {
 
   // aplica as classes resultado e card ao elemento
   li.classList.add("card");
-  li.classList.add("resultado");
 
   // ----- cria e depois insere as tag html para compor o card e insere os dados da api
   //
@@ -110,13 +109,10 @@ function showData(data) {
 //---------------------- apelos visuais para indicar erro no preenchimento da busca
 // mostra mensagem de erro no DOM
 function showError() {
-  cidade.style.boxShadow = "2px 2px 10px 4px #d0d0d0";
   error.style.display = "block";
-  resultado.classList.add("hide");
 }
 // esconde mensagem de erro non DOM
 function hideError() {
-  cidade.style.removeProperty("box-shadow");
   error.style.display = "none";
 }
 

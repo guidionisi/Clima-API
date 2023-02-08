@@ -11,14 +11,38 @@
 
 <body>
     <header>
+
         <div>
             <h1>Clima Norte</h1>
         </div>
+
         <div>
-            <h2>Condições atuais do tempo na região norte do RS</h2>
-            <ul>
-                <!-- nomes das cidades inseridas pelo JS -->
-            </ul>
+
+            <div>
+                <h2>Condições atuais do tempo na região norte do RS</h2>
+                <ul>
+                    <!-- nomes das cidades inseridas pelo JS -->
+                </ul>
+            </div>
+
+            <!------------------------- seção de busca -->
+            <div class="busca-area">
+                <div>
+                    <label for="">
+                        <span>Não encontrou? Insira uma nova cidade:</span>
+                    </label>
+                    <div class="input-area">
+                        <input type="text" id="txt-cidade">
+                        <button>
+                            <img src="img/search.svg" alt="ícone de lupa">
+                        </button>
+                    </div>
+                </div>
+
+                <div class="error">
+                    <span>Cidade não encontrada</span>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -31,46 +55,6 @@
             </ul>
         </section>
 
-        <!-------------------- seção de busca -->
-        <section class="container-busca card">
-            <div>
-                <h2>Não encontrou?</h2>
-                <p>Digite o nome da cidade:</p>
-            </div>
-            <div class="busca-area">
-                <input type="text" class="focus">
-                <button>
-                    <img src="img/search.svg" alt="ícone de lupa">
-                </button>
-            </div>
-            <div class="error">
-                <span>Cidade não encontrada</span>
-            </div>
-            <div class="resultado hide">
-
-                <div>
-                    <h2 id="localidade"></h2>
-                    <div class="resultado-item">
-                        <img class="icon" src="img/thermometer.svg" alt="ícone de temperatura">
-                        <span id="temperatura"></span>
-                    </div>
-                    <div class="resultado-item">
-                        <img class="icon" src="img/humidity.svg" alt="ícone de umidade">
-                        <span id="umidade"></span>
-                    </div>
-                    <div class="resultado-item">
-                        <img class="icon" src="img/wind.svg" alt="ícone de vento">
-                        <span id="vento"></span>
-                    </div>
-                </div>
-
-                <div class="clima-tempo">
-                    <img src="" alt="ícone clima-tempo">
-                    <span id="descricao"></span>
-                </div>
-
-            </div>
-        </section>
     </main>
 
 

@@ -3,10 +3,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
-  justify-content: center;
   margin: 0 auto;
   max-width: 860px;
   margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .container-lista-cidades ul {
@@ -16,13 +16,28 @@
   justify-content: space-between;
 }
 
+.container-lista-cidades h2 {
+  font-weight: 400;
+  color: #101010;
+  padding-bottom: 8px;
+}
+
+/* cria o card que envolve a previsão de uma cidade */
+.card {
+  padding: 24px;
+  width: 400px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 10px #e0e0e0;
+}
+
 /* posiciona e formata os elementos dentro do card */
-.resultado a {
+.card a {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.resultado div {
+
+.card div {
   color: #2a2a2a;
 }
 
@@ -48,4 +63,17 @@
   border-radius: 4px;
   min-width: 6em;
   background-image: radial-gradient(#b5b5b5, #f7f7f7 70%);
+}
+
+/* responsivo do main */
+@media (max-width: 800px) {
+  .container-lista-cidades ul {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 420px) {
+  .card {
+    width: 360px;
+  }
 }

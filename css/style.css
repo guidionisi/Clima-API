@@ -29,29 +29,10 @@ a {
 ul {
   list-style: none;
 }
-/* Estilos Globais */
 
+/* Estilos Globais */
 body {
   background-color: #f7f7f7;
-}
-
-h1 {
-  font-weight: 700;
-  color: #101010;
-}
-
-h2 {
-  font-weight: 400;
-  color: #101010;
-  padding-bottom: 8px;
-}
-
-/* Cria o card que envolve a previsão de uma cidade */
-.card {
-  padding: 24px;
-  width: 400px;
-  border-radius: 8px;
-  box-shadow: 2px 2px 10px #e0e0e0;
 }
 
 /* mensagem de erro ao não encontrar cidade */
@@ -59,8 +40,12 @@ h2 {
   display: none;
   font-size: 0.75em;
   margin-top: 4px;
-  color: tomato;
+  padding: 4px;
+  max-width: 300px;
+  background-color: #f7f7f755;
+  color: rgb(253, 79, 48);
 }
+
 /* esconde no DOM */
 .hide {
   opacity: 0%;

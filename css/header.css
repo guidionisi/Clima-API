@@ -1,27 +1,23 @@
-/* header */
+/* ------------------------------------ header */
 header {
   display: flex;
   flex-direction: row;
-  flex-wrap: no-wrap;
+  flex-wrap: wrap;
   gap: 40px;
-  padding: 60px 10px;
+  padding: 60px 10px 30px 10px;
   justify-content: space-evenly;
   align-items: center;
   background-image: url("/img/banner.jpg");
 }
-header ul {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 4px;
-}
+
+/* título de logo */
+/* lado direito do header */
 header h1 {
   font-size: 4em;
-  font-weight: 800;
+  font-weight: 700;
   color: #f7f7f7;
   position: relative;
 }
-
 header h1::after {
   content: "GD";
   font-size: 0.625rem;
@@ -30,13 +26,39 @@ header h1::after {
   bottom: 0;
   right: -10px;
 }
+
+/* lista de cidades incluídas na home */
+/* lado esquerdo do header */
+header ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
 header h2 {
   font-size: 1rem;
   color: aliceblue;
   max-width: 30ch;
   padding-bottom: 8px;
 }
+
 header li {
-  font-size: 0.75rem;
+  font-size: 0.75em;
   color: aliceblue;
+}
+
+/* responsivo do header */
+
+@media (max-width: 420px) {
+  header h1 {
+    font-size: 3.5em;
+  }
+  header h2 {
+    font-size: 0.875em;
+    max-width: none;
+  }
+  header li {
+    font-size: 0.65em;
+  }
 }
