@@ -5,47 +5,48 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description" content="Condições do clima nas principais cidades do norte do Rio Grande do Sul">
+    <meta name="keywords" content="Rio Grande do Sul, RS, clima, previsão do tempo">
+    <meta name="author" content="Guilherme Dionisio">
+    <link rel="stylesheet" href="css/style.min.css">
     <title>Tempo Norte</title>
 </head>
 
 <body>
     <header>
-
-        <div>
+        <div class="header-content">
             <h1>Clima Norte</h1>
-        </div>
-
-        <div>
 
             <div>
-                <h2>Condições atuais do tempo na região norte do RS</h2>
-                <ul>
-                    <!-- nomes das cidades inseridas pelo JS -->
-                </ul>
-            </div>
-
-            <!------------------------- seção de busca -->
-            <div class="busca-area">
                 <div>
-                    <label for="">
-                        <span>Não encontrou? Insira uma nova cidade:</span>
-                    </label>
-                    <div class="input-area">
-                        <input type="text" id="txt-cidade">
-                        <button>
-                            <img src="img/search.svg" alt="ícone de lupa">
-                        </button>
-                    </div>
+                    <h2>Condições atuais do tempo na região norte do RS</h2>
+                    <ul>
+                        <!-- nomes das cidades inseridas pelo JS -->
+                    </ul>
                 </div>
 
-                <div class="error">
-                    <span>Cidade não encontrada</span>
+                <!------------------------- seção de busca -->
+                <div class="busca-area">
+                    <div>
+                        <!-- form -->
+                        <label for="txt-cidade">
+                            <span>Não encontrou? Insira uma nova cidade:</span>
+                        </label>
+                        <div class="input-area">
+                            <input type="text" id="txt-cidade">
+                            <button>
+                                <img src="img/search.svg" alt="buscar" width="24" height="24">
+                            </button>
+                        </div>
+                    </div>
+                    <!-- mensagem de erro -->
+                    <div class="error">
+                        <span>Cidade não encontrada</span>
+                    </div>
                 </div>
             </div>
         </div>
     </header>
-
 
     <main>
         <!-------------------- seção de listagem de cidades -->
@@ -54,7 +55,6 @@
                 <!-- os itens da lista com os dados de cada cidade são inserido pelo script -->
             </ul>
         </section>
-
     </main>
 
 

@@ -1,12 +1,10 @@
 /* área de busca que fica no header */
-
 .input-area {
   display: flex;
   align-items: center;
   background-color: #f7f7f7;
   margin-top: 8px;
   border-radius: 4px;
-  /* max-width: 300px; */
   width: 100%;
 }
 
@@ -27,7 +25,6 @@
   outline: none;
   font-size: 0.875em;
   border: none;
-  /* max-width: 270px; */
   width: 100%;
   background-color: transparent;
 }
@@ -38,6 +35,7 @@
   background-color: transparent;
   cursor: pointer;
   outline: none;
+  padding-right: 4px;
 }
 
 button img {

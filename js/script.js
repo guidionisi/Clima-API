@@ -83,14 +83,14 @@ function showData(data) {
   const h2 = `<h2 id="titulo">${cidade_nome}, ${pais_nome}</h2>`;
 
   //ícone e temperatura
-  const thermometer = `<div><img class="icon" src="img/thermometer.svg" alt="ícone de temperatura"><span>Temperatura: ${temperatura_valor}ºC</span></div>`;
+  const thermometer = `<div><img class="icon" src="img/thermometer.svg" alt="ícone de temperatura" width="20" height="20"><span>Temperatura: ${temperatura_valor}ºC</span></div>`;
   //ícone e umidade
-  const humidity = `<div><img class="icon" src="img/humidity.svg" alt="ícone de umidade"><span>Umidade: ${umidade_valor}%</span></div>`;
+  const humidity = `<div><img class="icon" src="img/humidity.svg" alt="ícone de umidade" width="20" height="20"><span>Umidade: ${umidade_valor}%</span></div>`;
   //ícone e velocidade do vento
-  const wind = `<div><img class="icon" src="img/wind.svg" alt="ícone de vento"><span>Vento: ${vento_valor} km/h</span></div>`;
+  const wind = `<div><img class="icon" src="img/wind.svg" alt="ícone de vento" width="20" height="20"><span>Vento: ${vento_valor} km/h</span></div>`;
   //imagem e descrição do clima-tempo
   const climaTempo = `<div class='clima-tempo'>
-  <img src="http://openweathermap.org/img/wn/${climaTempo_icon}@2x.png" alt="ícone clima-tempo">
+  <img src="https://openweathermap.org/img/wn/${climaTempo_icon}@2x.png" alt="ícone clima-tempo" width="96" height="96">
       <span>${climaTempo_descricao}</span>
       </div>`;
 
