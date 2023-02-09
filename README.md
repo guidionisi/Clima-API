@@ -1,4 +1,4 @@
-# Tempo-Norte
+# Clima Norte
 
 Esta é uma aplicação experimental com o objetivo de mostrar as condições atuais do clima nas primcipais cidades da região norte do estado do RS.
 
